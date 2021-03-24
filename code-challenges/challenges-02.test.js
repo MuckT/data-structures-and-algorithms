@@ -22,9 +22,7 @@ CHALLENGE 2
 Write a function named addOne that, given an array of numbers, uses map to return a new array with each value simply incremented by 1.
 ------------------------------------------------------------------------------------------------ */
 
-const addOne = (arr) => {
-  return arr.map(item => item +1);
-};
+const addOne = (arr) => arr.map(item => item +1);
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
@@ -32,9 +30,7 @@ CHALLENGE 3
 Write a function named addQuestion that, given an array of strings, uses map to return a new array containing each string followed by a question mark character.
 ------------------------------------------------------------------------------------------------ */
 
-const addQuestion = (arr) => {
-  return arr.map(item => `${item}?`);
-};
+const addQuestion = (arr) => arr.map(item => `${item}?`);
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
@@ -142,9 +138,7 @@ const snorlaxAbilities = {
   weight: 4600,
 };
 
-const extractAbilities = (arr) => {
-  // Solution code here...
-};
+const extractAbilities = (arr) => arr.map(entry => entry.ability.name);
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 10 - Stretch Goal
@@ -189,9 +183,7 @@ const snorlaxStats = {
   weight: 4600,
 };
 
-const extractStats = (arr) => {
-  // Solution code here...
-};
+const extractStats = (arr) => arr.map(entry => ({name: entry.stat.name, total: entry.effort + entry.baseStat}));
 
 /* ------------------------------------------------------------------------------------------------
 TESTS
@@ -284,14 +276,14 @@ describe('Testing challenge 8', () => {
   });
 });
 
-xdescribe('Testing challenge 9', () => {
+describe('Testing challenge 9', () => {
   test('It should return an array containing only the ability names', () => {
     expect(extractAbilities(snorlaxAbilities.abilities)).toStrictEqual(['gluttony', 'cute charm', 'immunity']);
     expect(extractAbilities(snorlaxAbilities.abilities).length).toStrictEqual(3);
   });
 });
 
-xdescribe('Testing challenge 10', () => {
+describe('Testing challenge 10', () => {
   test('It should return an array containing objects with name and total values', () => {
     expect(extractStats(snorlaxStats.stats)).toStrictEqual([
       { name: 'speed', total: 35, },
