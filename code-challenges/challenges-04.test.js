@@ -21,13 +21,7 @@ function lower(str) {
   return str.toLowerCase();
 }
 
-const updateAnimal = (arr, callback) => {
-  let returnArray = [];
-  arr.forEach(item => {
-    returnArray.push(callback(item));
-  });
-  return returnArray;
-};
+const updateAnimal = (arr, callback) => arr.map(item => callback(item));
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
