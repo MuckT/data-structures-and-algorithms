@@ -45,7 +45,7 @@ Write a function named countNumberOfElements that, given an array as input, uses
 Note: You may not use the array's built-in length property.
 ------------------------------------------------------------------------------------------------ */
 
-const countNumberOfElements = (arr) => arr.reduce((a) => a + 1, 0);
+const countNumberOfElements = (arr) => arr.reduce(a => a + 1, 0);
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
@@ -104,10 +104,7 @@ let starWarsData = [{
 }];
 
 // Help on return: https://stackoverflow.com/a/44875537/7967484
-const returnNames = (arr) => arr.reduce((a,b) => {
-  a.push(b.name);
-  return a;
-}, []);
+const returnNames = (arr) => arr.reduce((a,b) => a.push(b.name) && a, []);
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
@@ -118,14 +115,7 @@ Note: You must use reduce for this challenge. You may not use the built-in .reve
 ------------------------------------------------------------------------------------------------ */
 
 // https://www.freecodecamp.org/news/how-to-reverse-a-string-in-javascript-in-3-different-ways-75e4763c68cb/
-const reversedString = (str) => {
-  // return (str === '') ? '' : reverseString(str.substr(1)) + str.charAt(0);
-  if(str === '') {
-    return '';
-  } else {
-    return reversedString(str.substring(1)) + str.charAt(0);
-  }
-};
+const reversedString = (str) => (str === '') ? '' : reversedString(str.substr(1)) + str.charAt(0);
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7 - Stretch Goal
@@ -176,9 +166,7 @@ const characters = [
   },
 ];
 
-const countNumberOfChildren = (arr) => {
-  // Solution code here...
-};
+const countNumberOfChildren = (arr) => arr.reduce((a,b) => b.children === undefined ? a + 0 : a + b.children.length, 0);
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 8 - Stretch Goal
@@ -188,9 +176,15 @@ Write a function that, given an array of numbers as input, uses reduce to calcul
 Hint: The accumulator should begin as { count: 0, sum: 0 }
 ------------------------------------------------------------------------------------------------ */
 
-const calculateAverage = (arr) => {
-  // Solution code here...
-};
+const calculateAverage = (arr) => arr.reduce((a,b) => {
+  a.count++;
+  a.sum += b;
+  if (a.count !== arr.length) {
+    return a;
+  } else {
+    return a.sum / a.count;
+  }
+}, {count: 0, sum: 0});
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 9 - Stretch Goal
@@ -209,9 +203,12 @@ const isPrime = (value) => {
   return value > 1;
 };
 
-const countPrimeNumbers = (arr) => {
-  // Solution code here...
-};
+const countPrimeNumbers = (arr) => arr.reduce((a, b) => {
+  if(isPrime(b)) {
+    a++;
+  }
+  return a;
+}, 0);
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 10 - Stretch Goal
@@ -252,9 +249,13 @@ const snorlaxData = {
   weight: 4600,
 };
 
-const extractStat = (statName, arr) => {
-  // Solution code here...
-};
+// TODO: Fix to work with multiple matches
+const extractStat = (statName, arr) => arr.reduce((a, b) => {
+  if(b.stat.name.includes(statName)) {
+    a = b;
+  }
+  return a;
+}, {});
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 11 - Stretch Goal
@@ -266,8 +267,16 @@ Write a function named extractChildren that, given the array of characters from 
 2) Then, uses reduce to return an array of all the children's names in the filtered array
 ------------------------------------------------------------------------------------------------ */
 
-const extractChildren = (arr) => {
-  // Solution code here...
+// TODO: This could be a lot better with a better use of reduce
+const extractChildren = arr => {
+  let children = [];
+  let withA = arr.filter(item => item.name.indexOf('a') !== -1);
+  withA.reduce((a, b) => {
+    if(b.children !== undefined) {
+      b.children.forEach(child => children.push(child));
+    }
+  }, []);
+  return children;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -324,31 +333,31 @@ describe.only('Testing challenge 6', () => {
   });
 });
 
-xdescribe('Testing challenge 7', () => {
+describe.only('Testing challenge 7', () => {
   test('It should return the total number of children', () => {
     expect(countNumberOfChildren(characters)).toStrictEqual(14);
   });
 });
 
-xdescribe('Testing challenge 8', () => {
+describe.only('Testing challenge 8', () => {
   test('It should return the average of the numbers in the array', () => {
     expect(calculateAverage([18, 290, 37, 4, 55, 16, 7, 85 ])).toStrictEqual(64);
   });
 });
 
-xdescribe('Testing challenge 9', () => {
+describe.only('Testing challenge 9', () => {
   test('It should return a count of the prime numbers in the array', () => {
     expect(countPrimeNumbers([1, 2, 13, 64, 45, 56, 17, 8])).toStrictEqual(3);
   });
 });
 
-xdescribe('Testing challenge 10', () => {
+describe.only('Testing challenge 10', () => {
   test('It should return any stats that match the input', () => {
     expect(extractStat('speed', snorlaxData.stats)).toStrictEqual({ stat: { url: 'https://pokeapi.co/api/v2/stat/6/', name: 'speed' }, effort: 5, baseStat: 30 });
   });
 });
 
-xdescribe('Testing challenge 11', () => {
+describe.only('Testing challenge 11', () => {
   test('It should return an array containing the names of the children', () => {
     expect(extractChildren(characters)).toStrictEqual([ 'Robb', 'Sansa', 'Arya', 'Bran', 'Rickon', 'Drogon', 'Rhaegal', 'Viserion', 'Margaery', 'Loras' ]);
     expect(extractChildren(characters).length).toStrictEqual(10);
