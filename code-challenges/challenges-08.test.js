@@ -121,7 +121,8 @@ Do not use the vertical bar (pipe) in your pattern.
 ------------------------------------------------------------------------------------------------ */
 
 // With Pipes :/
-const matchMonth = (input) => /^October$|^Oct$|^october$|^oct$/g.test(input);
+// const matchMonth = (input) => /^October$|^Oct$|^october$|^oct$/g.test(input);
+const matchMonth = input => /^[Oo]ct(ober)?$/g.test(input);
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 8 - Stretch Goal
