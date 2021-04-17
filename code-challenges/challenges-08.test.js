@@ -97,7 +97,8 @@ Write a function named isCapitalized that takes in a string. This function shoul
 Return an array containing all the matches.
 ------------------------------------------------------------------------------------------------ */
 
-const isCapitalized = (str) => [...str.matchAll(/\b[A-Z]\w*\b/g)].map(items => items[0]);
+// const isCapitalized = (str) => [...str.matchAll(/\b[A-Z]\w*\b/g)].map(items => items[0]);
+const isCapitalized = str => str.match(/\b[A-Z]\w*\b/g) || [];
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
@@ -132,7 +133,8 @@ For example, if given the string "Hello, and have a wonderful day!", the word "H
 The expected output of "Hello, and have a wonderful day!" is ["and ", "have ", "a ", "wonderful "].
 ------------------------------------------------------------------------------------------------ */
 
-const noPunctuation = str => [...str.matchAll(/\b\w*\s/g)].map(items => items[0]);
+// const noPunctuation = str => [...str.matchAll(/\b\w*\s/g)].map(items => items[0]);
+const noPunctuation = str => str.match(/\b\w*\s/g) || [];
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 9 - Stretch Goal
@@ -160,7 +162,8 @@ Hint: All of these words end with the letters "ells".
 
 const seashells = 'She sells seashells by the seashore. The shells she sells are surely seashells. So if she sells shells on the seashore, I\'m sure she sells seashore shells.';
 
-const findShells = (str) => [...str.matchAll(/\b\w*ells\b/g)].map(items => items[0]);
+// const findShells = (str) => [...str.matchAll(/\b\w*ells\b/g)].map(items => items[0]);
+const findShells = str => str.match(/\b\w*ells\b/g) || [];
 
 /* ------------------------------------------------------------------------------------------------
 TESTS
