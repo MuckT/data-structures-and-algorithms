@@ -84,8 +84,15 @@ const alkiBeach = [33, 31, 147, 130, 27, 93, 38, 126, 141, 63, 46, 17];
 const cookieStores = [firstPike, seaTac, seattleCenter, capHill, alkiBeach];
 
 const grandTotal = (stores) => {
-  // Solution code here...
-
+  let hourlyTotals = [];
+  hoursOpen.forEach((hour, index) => {
+    let total = 0;
+    stores.forEach(store => {
+      total += store[index];
+    });
+    hourlyTotals.push(total);
+  });
+  return hourlyTotals;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -99,7 +106,9 @@ Write a function named salesData that uses forEach to iterate over the hourlySal
 ------------------------------------------------------------------------------------------------ */
 
 const salesData = (hours, data) => {
-  // Solution code here...
+  let totals = [];
+  hours.forEach((item, index) => totals.push({sales: `${data[index]} cookies`, time: item}));
+  return totals;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -123,8 +132,11 @@ const errands = [
   }
 ];
 
+// const howManyTreats = (arr) => arr.filter(store => store.name === 'Pet store ' && store.items.filter(items => Object.values(items).includes('Treats')));
 const howManyTreats = (arr) => {
-  // Solution code here...
+  let storeResults = arr.filter(item => item.store === 'Pet store');
+  let treats = storeResults[0].items.filter(entry => entry.name === 'Treats');
+  return treats[0].quantity;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -229,27 +241,27 @@ Run your tests from the console: jest challenge-12.test.js
 
 ------------------------------------------------------------------------------------------------ */
 
-describe.only('Testing challenge 1', () => {
+describe('Testing challenge 1', () => {
   test('it should return the last 10 characters of a string as an array', () => {
     expect(returnTen('hello world')).toStrictEqual(['e','l','l','o',' ','w','o','r','l','d']);
     expect(returnTen('world')).toStrictEqual(['w','o','r','l','d']);
   });
 });
 
-describe.only('Testing challenge 2', () => {
+describe('Testing challenge 2', () => {
   test('It should return the max value', () => {
     expect(findMax([[13,24,24,2], [2,5,6], [2,3]])).toStrictEqual(24);
   });
 });
 
-describe.only('Testing challenge 3', () => {
+describe('Testing challenge 3', () => {
   test('It should return the total sum', () => {
     expect(totalSum([[13,24,24,2], [2,5,6], [2,3]])).toStrictEqual(81);
     expect(totalSum([])).toStrictEqual(0);
   });
 });
 
-describe.only('Testing challenge 4', () => {
+describe('Testing challenge 4', () => {
   test('It should add the hourly totals array', () => {
     expect(grandTotal(cookieStores)).toStrictEqual([88, 153, 252, 286, 139, 161, 145, 232, 276, 207, 161, 169]);
   });
