@@ -77,7 +77,7 @@ Your function should include a single regular expression pattern that matches an
 Return either true or false.
 ------------------------------------------------------------------------------------------------ */
 
-const validatePhoneNumber = (phoneNumber) => /^\d{3}? ?-?\d{3}-? ?\d{4}$|[(]\d{3}[)] ?-?\d{3}-? ?\d{4}$/g.test(phoneNumber);
+const validatePhoneNumber = (phoneNumber) => /^\d{3}? ?-?\d{3}-? ?\d{4}$|^[(]\d{3}[)] ?-?\d{3}-? ?\d{4}$/g.test(phoneNumber);
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7 - Stretch Goal
@@ -88,9 +88,7 @@ For example, findTagNames(['<h1>Hello, world!</h1>', '<p>Welcome to my site</p>'
 findTagNames(['<div><h1>Hello, world!</h1></div>', '<p>Welcome to my site</p>']) returns ['/h1', '/div', '/p'].
 ------------------------------------------------------------------------------------------------ */
 
-const findTagNames = elements => {
-  // Solution code here...
-};
+const findTagNames = elements => elements.map(element => element.match(/\/\w*/g)).reduce((a, b) => a.concat(b), []);
 
 /* ------------------------------------------------------------------------------------------------
 TESTS
@@ -200,7 +198,7 @@ describe('Testing challenge 6', () => {
   });
 });
 
-xdescribe('Testing challenge 7', () => {
+describe('Testing challenge 7', () => {
   test('It should return the closing tags', () => {
     expect(findTagNames(['<h1>Hello, world!</h1>', '<p>Welcome to my site</p>'])).toStrictEqual(['/h1', '/p']);
   });
