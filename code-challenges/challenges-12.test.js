@@ -77,7 +77,7 @@ Your function should include a single regular expression pattern that matches an
 Return either true or false.
 ------------------------------------------------------------------------------------------------ */
 
-// const validatePhoneNumber = (phoneNumber) => /^(\d{3}|(\d{3}))?[\s.-]\d{3}[\s.-]\d{4}$/g.test(phoneNumber);
+const validatePhoneNumber = (phoneNumber) => /^\d{3}? ?-?\d{3}-? ?\d{4}$|[(]\d{3}[)] ?-?\d{3}-? ?\d{4}$/g.test(phoneNumber);
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7 - Stretch Goal
@@ -176,7 +176,7 @@ describe('Testing challenge 5', () => {
   });
 });
 
-describe.skip('Testing challenge 6', () => {
+describe('Testing challenge 6', () => {
   test('It should match the acceptable phone number formats', () => {
     expect(validatePhoneNumber('(555) 555-5555')).toBeTruthy();
     expect(validatePhoneNumber('555 555-5555')).toBeTruthy();
