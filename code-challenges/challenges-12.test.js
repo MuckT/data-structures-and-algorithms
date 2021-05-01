@@ -77,7 +77,7 @@ Your function should include a single regular expression pattern that matches an
 Return either true or false.
 ------------------------------------------------------------------------------------------------ */
 
-const validatePhoneNumber = (phoneNumber) => /^\d{3}? ?-?\d{3}-? ?\d{4}$|^[(]\d{3}[)] ?-?\d{3}-? ?\d{4}$/g.test(phoneNumber);
+const validatePhoneNumber = (phoneNumber) => /^\d{3}[ -]?\d{3}[ -]?\d{4}$|^[(]\d{3}[)][ -]?\d{3}[ -]?\d{4}$/.test(phoneNumber);
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7 - Stretch Goal
