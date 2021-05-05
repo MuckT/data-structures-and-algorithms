@@ -231,14 +231,14 @@ Run your tests from the console: jest challenge-14.test.js
 
 ------------------------------------------------------------------------------------------------ */
 
-describe.only('Testing challenge 1', () => {
+describe('Testing challenge 1', () => {
   test('It should return a list of names', () => {
     const names = ['Mr. Brown', ' Ms. Red', 'Dr. Blue', 'Mrs.', '', 'Ms. Black', 'dr. Green', 'Mrs. Orange', 'Purple', 'Mr.  Pink'];
     expect(screenForNames(names)).toStrictEqual(['Mr. Brown', 'Dr. Blue', 'Ms. Black', 'Mrs. Orange']);
   });
 });
 
-describe.only('Testing challenge 2', () => {
+describe('Testing challenge 2', () => {
   test('It should convert each word to title case', () => {
     const words = ['apple', 'banana', 'MacGyver'];
     expect(toTitleCase(words)).toStrictEqual(['Apple', 'Banana', 'MacGyver']);
@@ -247,14 +247,14 @@ describe.only('Testing challenge 2', () => {
   });
 });
 
-describe.only('Testing challenge 3', () => {
+describe('Testing challenge 3', () => {
   test('It should return only characters that are bigger than Luke', () => {
     expect(biggerThanLuke(starWarsData)).toStrictEqual('Darth Vader - Pex Kylar');
     expect(biggerThanLuke([])).toStrictEqual('');
   });
 });
 
-describe.only('Testing challenge 4', () => {
+describe('Testing challenge 4', () => {
   test('It should sort items by a price', () => {
 
     expect(sortBy('price', [
@@ -283,7 +283,7 @@ describe.only('Testing challenge 4', () => {
   });
 });
 
-describe.only('Testing challenge 5', () => {
+describe('Testing challenge 5', () => {
   test('It should check if url is https', () => {
 
     expect(isSecure('http://www.insecure.com')).toBe(false);
@@ -292,12 +292,13 @@ describe.only('Testing challenge 5', () => {
   });
 });
 
-describe.only('Testing challenge 6', () => {
+describe('Testing challenge 6', () => {
 
   test('It should return true if there are three in a row', () => {
     expect(detectTicTacToeWin([['X', '', 'O'], ['X', 'O', ''], ['X', 'O', 'X']])).toStrictEqual(true);
     expect(detectTicTacToeWin([['O', '', 'X'], ['X', 'O', 'X'], ['X', '', 'O']])).toStrictEqual(true);
     expect(detectTicTacToeWin([['O', 'O', 'O'], ['X', '', 'X'], ['X', 'X', 'O']])).toStrictEqual(true);
+    expect(detectTicTacToeWin([['O', '', 'X'], ['O', 'X', ''], ['X', 'O', '']])).toStrictEqual(true);
   });
 
   test('It should return false if there are not three in a row', () => {
@@ -306,9 +307,5 @@ describe.only('Testing challenge 6', () => {
 
   test('It should not treat empty 3 in row as winner', () => {
     expect(detectTicTacToeWin([['', '', ''], ['O', 'O', ''], ['X', 'O', 'X']])).toEqual(false);
-  });
-
-  test('It should return true if there are three in a row anti-diagonal', () => {
-    expect(detectTicTacToeWin([['O', '', 'X'], ['O', 'X', ''], ['X', 'O', '']])).toStrictEqual(true);
   });
 });
