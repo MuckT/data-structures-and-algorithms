@@ -45,11 +45,11 @@ You are given an object with names and their coresponding phone numbers that loo
 }
 
 HR has asked you to change the data to make it easier to print so that it looks like this:
-[
+{
   'Grace Hopper: 222-303-5938',
   'Ada Lovelace: 222-349-9842',
   'Alan Turing: 222-853-5933'
-]
+}
 
 ------------------------------------------------------------------------------------------------ */
 
