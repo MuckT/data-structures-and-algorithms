@@ -5,13 +5,13 @@ const removeMiddle = require('./array-insert-shift').removeMiddle
 
 describe('Given arrayInsertShift()', () => {
   describe('When array length is even', () => {
-    it('Then should return add item to the middle of an array', () => {
+    it('Then should return array with item added to the middle', () => {
       expect(arrayInsertShift([2,4,6,-8], 5)).toStrictEqual([2,4,5,6,-8])
     })
   })
 
   describe('When array length is odd', () => {
-    it('Then should return add item to the middle of an array', () => {
+    it('Then should return array with item added to the middle', () => {
       expect(arrayInsertShift([42,8,15,23,42], 16)).toStrictEqual([42,8,15,16,23,42])
     })
   })
