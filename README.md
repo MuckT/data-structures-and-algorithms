@@ -12,4 +12,8 @@ Each day, you'll add one new file to this folder to do your work for the day's a
 
 ### 401 Data Structures, Code Challenges
 
-- Please follow the instructions specific to your 401 language, which can be found in the directory below, matching your course.
+[Reverse Array](javascript/code-challenges/reverse-array/README.md)
+
+[Array Insert Shift](javascript/code-challenges/array-insert-shift/README.md)
+
+[Array Binary Search](javascript/code-challenges/array-binary-search/README.md)
