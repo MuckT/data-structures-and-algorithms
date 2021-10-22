@@ -47,6 +47,12 @@ Follow your JavaScript standard naming conventions.
 5. Will return true when finding a value within the linked list that exists
 6. Will return false when searching for a value in the linked list that does not exist
 7. Can properly return a collection of all the values that exist in the linked list
+8. Can successfully add a node to the end of the linked list
+9. Can successfully add multiple nodes to the end of a linked list
+10. Can successfully insert a node before a node located i the middle of a linked list
+11. Can successfully insert a node before the first node of a linked list
+12. Can successfully insert after a node in the middle of the linked list
+13. Can successfully insert a node after the last node of the linked list
 
 ## Approach & Efficiency
 

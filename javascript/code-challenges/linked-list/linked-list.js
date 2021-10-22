@@ -61,7 +61,7 @@ class LinkedList {
   // Check if a node value is in a linked list
   includes(value) {
     let current = this.head
-    while (current) {
+    while(current) {
       if(current.value === value) {
         // Return true if object is found and exit the while loop
         return true
