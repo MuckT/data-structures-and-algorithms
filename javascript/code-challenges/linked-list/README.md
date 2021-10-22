@@ -12,7 +12,7 @@ The linked list class should contain the following methods:
 - `insert`
   Arguments: value
   Returns: nothing
-  Adds a new node with that value to the head of the list with an O(1) Time performance.
+  Adds a new node with that value to the head of the linked list with an O(1) Time performance.
 - `includes`
   Arguments: value
   Returns: Boolean
@@ -21,6 +21,18 @@ The linked list class should contain the following methods:
   Arguments: none
   Returns: a string representing all the values in the Linked List, formatted as:
   "{ a } -> { b } -> { c } -> NULL"
+- `append`
+  Arguments: value
+  Returns: nothing
+  Adds a new node to the end of the linked list
+- `insertAfter`
+  Arguments: value, nextValue
+  Returns: nothing
+  Inserts a new node after the node with the specified value
+- `insertBefore`
+  Arguments: value, nextValue
+  Returns: nothing
+  Inserts a new node before the node with the specified value
 
 Any exceptions or errors that come from your code should be semantic, capture-able errors. For example, rather than a default error thrown by your language, your code should raise/throw a custom, semantic error that describes what went wrong in calling the methods you wrote for this lab.
 
@@ -43,6 +55,9 @@ Follow your JavaScript standard naming conventions.
 | insert | O(1) | O(n) |
 | includes | O(n) | O(n) |
 | toString | O(n) | O(n) |
+| append | O(n) | O(n) |
+| insertAfter | O(n) | O(n) |
+| insertBefore | O(n) | O(n) |
 
 ## External Sources
 [https://www.educative.io/edpresso/what-is-a-singly-linked-list](https://www.educative.io/edpresso/what-is-a-singly-linked-list)

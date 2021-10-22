@@ -9,4 +9,4 @@ I took the approach of the while loop because I knew I had to return the value. 
 
 | Time | Space |
 | --- | --- |
-| `O(log N)` |  `O(1)`
+| `O(log N)` |  `O(1)` |
