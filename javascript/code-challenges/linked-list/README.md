@@ -17,7 +17,7 @@ The linked list class should contain the following methods:
   Arguments: value
   Returns: Boolean
   Indicates whether that value exists as a Node’s value somewhere within the list.
-- `to string`
+- `toString`
   Arguments: none
   Returns: a string representing all the values in the Linked List, formatted as:
   "{ a } -> { b } -> { c } -> NULL"
@@ -37,10 +37,12 @@ Follow your JavaScript standard naming conventions.
 7. Can properly return a collection of all the values that exist in the linked list
 
 ## Approach & Efficiency
-<!-- TODO What approach did you take? Why? What is the Big O space/time for this approach? -->
 
-## API
-<!-- TODO Description of each method publicly available to your Linked List -->
+| Method | Time Complexity | Space Complexity |
+| ---- | ---- | ---- |
+| insert | O(1) | O(n) |
+| includes | O(n) | O(n) |
+| toString | O(n) | O(n) |
 
 ## External Sources
 [https://www.educative.io/edpresso/what-is-a-singly-linked-list](https://www.educative.io/edpresso/what-is-a-singly-linked-list)
