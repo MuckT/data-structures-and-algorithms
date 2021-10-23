@@ -72,6 +72,27 @@ class LinkedList {
     return false
   }
 
+  kthFromEnd(k) {
+    // Get linked list length
+    let current = this.head
+    let length = 0
+    while(current) {
+      length++
+      current = current.next
+    }
+    // Get K from end - Start from head
+    current = this.head
+    let nodeIndex = 0
+    while(current) {
+      nodeIndex++
+      if(length - nodeIndex === k) {
+        return current.value
+      }
+      current = current.next
+    }
+    throw new Error('Index Out Of Range')
+  }
+
   //Returns: a string representing all the values in the Linked List, formatted as:
   // "{ a } -> { b } -> { c } -> NULL"
   toString() {
