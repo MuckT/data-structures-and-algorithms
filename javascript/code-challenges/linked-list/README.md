@@ -12,7 +12,7 @@ The linked list class should contain the following methods:
 - `insert`
   Arguments: value
   Returns: nothing
-  Adds a new node with that value to the head of the list with an O(1) Time performance.
+  Adds a new node with that value to the head of the linked list with an O(1) Time performance.
 - `includes`
   Arguments: value
   Returns: Boolean
@@ -21,6 +21,18 @@ The linked list class should contain the following methods:
   Arguments: none
   Returns: a string representing all the values in the Linked List, formatted as:
   "{ a } -> { b } -> { c } -> NULL"
+- `append`
+  Arguments: value
+  Returns: nothing
+  Adds a new node to the end of the linked list
+- `insertAfter`
+  Arguments: value, nextValue
+  Returns: nothing
+  Inserts a new node after the node with the specified value
+- `insertBefore`
+  Arguments: value, nextValue
+  Returns: nothing
+  Inserts a new node before the node with the specified value
 
 Any exceptions or errors that come from your code should be semantic, capture-able errors. For example, rather than a default error thrown by your language, your code should raise/throw a custom, semantic error that describes what went wrong in calling the methods you wrote for this lab.
 
@@ -35,6 +47,12 @@ Follow your JavaScript standard naming conventions.
 5. Will return true when finding a value within the linked list that exists
 6. Will return false when searching for a value in the linked list that does not exist
 7. Can properly return a collection of all the values that exist in the linked list
+8. Can successfully add a node to the end of the linked list
+9. Can successfully add multiple nodes to the end of a linked list
+10. Can successfully insert a node before a node located i the middle of a linked list
+11. Can successfully insert a node before the first node of a linked list
+12. Can successfully insert after a node in the middle of the linked list
+13. Can successfully insert a node after the last node of the linked list
 
 ## Approach & Efficiency
 
@@ -43,6 +61,9 @@ Follow your JavaScript standard naming conventions.
 | insert | O(1) | O(n) |
 | includes | O(n) | O(n) |
 | toString | O(n) | O(n) |
+| append | O(n) | O(n) |
+| insertAfter | O(n) | O(n) |
+| insertBefore | O(n) | O(n) |
 
 ## External Sources
 [https://www.educative.io/edpresso/what-is-a-singly-linked-list](https://www.educative.io/edpresso/what-is-a-singly-linked-list)
