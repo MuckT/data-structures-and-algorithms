@@ -97,6 +97,37 @@ describe('Given linked list', () => {
     })
   })
 
+  describe('When getting nth node from end', () => {
+    let list = new LinkedList()
+    beforeAll(() => {
+      list.insert('Test 03')
+      list.insert('Test 02')
+      list.insert('Test 01')
+      list.insert('Test 00')
+    })
+
+    it('Then should return \'Test 03\' if kthFromEnd(0)',  () => {
+      expect(list.kthFromEnd(0)).toStrictEqual('Test 03')
+    })
+
+    it('Then should return \'Test 02\' if kthFromEnd(1)',  () => {
+      expect(list.kthFromEnd(1)).toStrictEqual('Test 02')
+    })
+
+    it('Then should return \'Test 01\' if kthFromEnd(2)',  () => {
+      expect(list.kthFromEnd(2)).toStrictEqual('Test 01')
+    })
+
+    it('Then should return \'Test 00\' if kthFromEnd(3)',  () => {
+      expect(list.kthFromEnd(3)).toStrictEqual('Test 00')
+    })
+
+    it('Then should throw error if kthFromEnd() is out of range',  () => {
+      expect(() => { list.kthFromEnd(6)}).toThrowError('Index Out Of Range')
+      expect(() => { list.kthFromEnd(-1)}).toThrowError('Index Out Of Range')
+    })
+  })
+
   describe('When printing toString()', () => {
     let list = new LinkedList()
     beforeAll(() => {

@@ -33,6 +33,9 @@ The linked list class should contain the following methods:
   Arguments: value, nextValue
   Returns: nothing
   Inserts a new node before the node with the specified value
+- `kthFromEnd`
+  Arguments: k
+  Returns: Int - the node’s value that is k places from the tail of the linked list
 
 Any exceptions or errors that come from your code should be semantic, capture-able errors. For example, rather than a default error thrown by your language, your code should raise/throw a custom, semantic error that describes what went wrong in calling the methods you wrote for this lab.
 
@@ -64,6 +67,9 @@ Follow your JavaScript standard naming conventions.
 | append | O(n) | O(n) |
 | insertAfter | O(n) | O(n) |
 | insertBefore | O(n) | O(n) |
+| nthFromEnd | O(n) | O(n) |
 
 ## External Sources
 [https://www.educative.io/edpresso/what-is-a-singly-linked-list](https://www.educative.io/edpresso/what-is-a-singly-linked-list)
+
+[Big O Cheat Sheet](https://www.bigocheatsheet.com/)
