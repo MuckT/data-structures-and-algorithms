@@ -1,6 +1,13 @@
 'use strict'
 
+/** Class representing a point. */
 class Stack {
+  /**
+   * Represents a stack.
+   * @constructor
+   * @param {number} top - the next item to be selected from the stack.
+   * @param {array} storage - An array containing the values of the stack.
+   */
   constructor(top = 0, storage = []) {
     this.storage = storage
     this.top = top
