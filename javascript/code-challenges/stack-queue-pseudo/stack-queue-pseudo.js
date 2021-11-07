@@ -8,14 +8,15 @@ class pseudoQueue {
     this.out = new Stack(outTop, outStorage)
   }
 
-  // With isEmpty() - change to use peek
+  // TODO: With isEmpty() - change to use peek
   dequeue() {
+    if (!this.out.isEmpty()) { throw new Error('The queue is empty')}
     if (this.out.isEmpty()) {
       while (!this.in.isEmpty()) {
         this.out.push(this.in.pop())
       }
     }
-    this.out.pop()
+    return this.out.pop()
   }
 
   enqueue(value) {
