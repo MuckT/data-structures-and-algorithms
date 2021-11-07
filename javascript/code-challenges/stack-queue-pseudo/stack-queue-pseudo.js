@@ -15,6 +15,7 @@ class pseudoQueue {
         this.out.push(this.in.pop())
       }
     }
+    if(this.out.isEmpty()) {throw new Error('Empty Queue')}
     return this.out.pop()
   }
 
