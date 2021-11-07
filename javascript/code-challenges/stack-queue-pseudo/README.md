@@ -1,7 +1,7 @@
 # Challenge Summary
 Create a new class called pseudo queue. Implement our standard queue using two stack instances.
 
-## Methods
+### Methods
 `enqueue`
   - Inserts value into the PseudoQueue, using a first-in, first-out approach.
 
@@ -17,7 +17,7 @@ Create a new class called pseudo queue. Implement our standard queue using two s
 | enqueue | O(n) | O(n) |
 | dequeue | O(n) | O(n) |
 
-## Run Solution
+### Run Solution
 
 ```Bash
 # Install dependencies

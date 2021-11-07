@@ -2,7 +2,7 @@
 
 const Stack = require('../stacks-and-queues/stack/stack')
 
-class pseudoQueue {
+class PseudoQueue {
   constructor(inTop = 0, inStorage = [], outTop = 0, outStorage = []) {
     this.in = new Stack(inTop, inStorage),
     this.out = new Stack(outTop, outStorage)
@@ -30,4 +30,4 @@ class pseudoQueue {
   }
 }
 
-module.exports = pseudoQueue
+module.exports = PseudoQueue

@@ -1,12 +1,12 @@
 'use strict'
 
-const pseudoQueue = require('./stack-queue-pseudo')
+const PseudoQueue = require('./stack-queue-pseudo')
 
 let populatedQueue, emptyQueue
 
 beforeEach(() => {
-  populatedQueue = new pseudoQueue(3, [10,15,20])
-  emptyQueue = new pseudoQueue()
+  populatedQueue = new PseudoQueue(3, [10,15,20])
+  emptyQueue = new PseudoQueue()
 })
 
 describe('Given PseudoQueue', () => {
