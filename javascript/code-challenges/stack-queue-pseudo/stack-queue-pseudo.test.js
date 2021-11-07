@@ -11,6 +11,11 @@ beforeEach(() => {
 
 describe('Given PseudoQueue', () => {
   describe('When enqueuing', () => {
+    it('Then should be able to enqueue on empty queue', () => {
+      emptyQueue.enqueue(1)
+      expect(emptyQueue.out.storage).toStrictEqual([ 1 ])
+    })
+
     it('Then should be able to enqueue', () => {
       populatedQueue.enqueue(5)
       expect(populatedQueue.out.storage).toStrictEqual([ 5, 20, 15, 10 ])
@@ -25,6 +30,10 @@ describe('Given PseudoQueue', () => {
   })
 
   describe('When dequeueing', () => {
+    it('Then should throw error for a dequeue on empty queue', () => {
+      expect(() => { emptyQueue.dequeue() }).toThrow('Empty Queue')
+    })
+
     it('Then should be able to dequeue', () => {
       populatedQueue.dequeue()
       expect(populatedQueue.out.storage).toStrictEqual([20, 15])
