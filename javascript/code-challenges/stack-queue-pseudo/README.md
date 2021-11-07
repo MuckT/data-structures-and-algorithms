@@ -9,15 +9,15 @@ Create a new class called pseudo queue. Implement our standard queue using two s
   - Extracts a value from the PseudoQueue, using a first-in, first-out approach.
 
 ## Whiteboard Process
-<!-- Embedded whiteboard image -->
+![WhiteBoard Solution](stack-queue-pseudo.jpg)
 
 ## Approach & Efficiency
 | Method | Time Complexity | Space Complexity |
 | ---- | ---- | ---- |
-| enqueue | | |
-| dequeue | | |
+| enqueue | O(n) | O(n) |
+| dequeue | O(n) | O(n) |
 
-## Solution
+## Run Solution
 
 ```Bash
 # Install dependencies
