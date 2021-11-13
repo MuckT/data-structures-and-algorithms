@@ -20,7 +20,8 @@
 
 ## Approach & Efficiency
 
-### Stack
+Use an object for storage
+
 | Method  | Time Complexity | Space Complexity |
 | ---- | ---- | ---- |
 | enqueue | O(1) | O(1)|
@@ -31,3 +32,7 @@
 # run all related tests
 npm test animal-shelter.test.js
 ```
+
+### Sources
+
+[ Implement a Queue in JavaScript ](https://initjs.org/implement-a-queue-in-javascript-de306a8821c)
