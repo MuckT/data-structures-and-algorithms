@@ -24,10 +24,16 @@ Write a function called `validateBrackets` representing whether or not the brack
 | validateBrackets | O(n) | O(n) |
 
 ## Solution
-```Bash
+```sh
 # Install dependencies
 npm install
 
 # run jest tests for stack-queue-pseudo
 npm test stack-queue-brackets.test.js
 ```
+### Sources 
+
+[Parenthesis Matching Problem in JavaScript](https://paulrohan.medium.com/parenthesis-matching-problem-in-javascript-the-hacking-school-hyd-7d7708278911)
+
+[Solving Balanced Brackets in Javascript with Stacks](https://levelup.gitconnected.com/solving-balanced-brackets-in-javascript-with-stacks-edbc52a57309)
+
