@@ -62,4 +62,13 @@ describe('Binary Tree Traversal', () => {
     let postOrder = tree.postOrder()
     expect(postOrder).toEqual(postRes)
   })
+
+  it('max returns correct value', () => {
+    expect(tree.max()).toStrictEqual(9)
+  })
+
+  it('max throws error on empty tree', () => {
+    let emptyTree = null
+    expect(() => { emptyTree.max().toThrow('No Nodes Present in Binary Tree')})
+  })
 })

@@ -5,15 +5,20 @@
 Create a Binary Tree Class with `preOrder`, `inOrder`, `postOrder` methods.
 Create a Binary Search Tree that extends the Binary Tree Class with `_add` and `_contains` methods.
 
-## Approach & Efficiency
+## Approach & Efficiency Binary Tree
 | Method  | Time Complexity |
 | ---- | ---- |
 | `preOrder` | O(n) |
 | `inOrder` | O(n) |
 | `postOrder` | O(n) |
+| `max` | O(n) |
+
+
+## Approach & Efficiency Binary Search Tree
+| Method  | Time Complexity |
+| ---- | ---- |
 | `_add` | O(h) |
 | `_contains` | O(h) |
-
 ## Methods
 
 `_add`
@@ -22,7 +27,11 @@ Create a Binary Search Tree that extends the Binary Tree Class with `_add` and `
 
 `_contains`
 
-- Returns: boolean indicating whether or not the value is in the tree.
+- Returns a boolean indicating whether or not the value is in the tree.
+
+`max`
+
+- Returns the max value found in a binary tree.
 
 ### Run Solution
 
