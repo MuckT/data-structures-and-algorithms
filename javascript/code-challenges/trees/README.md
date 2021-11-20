@@ -42,3 +42,6 @@ npm install
 # run jest tests for binary-tree and binary-search-tree
 npm test binary-tree.test.js binary-search-tree.test.js
 ```
+### Sources
+
+[Spread Syntax](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
