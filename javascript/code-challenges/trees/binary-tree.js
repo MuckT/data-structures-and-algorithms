@@ -43,6 +43,31 @@ class BinaryTree{
     _walk(this.root)
     return results
   }
+  
+  breadthFirst() {
+    if(this.root === null) { throw new Error('No Nodes Present in Binary Tree')}
+    // Use a queue to hold nodes
+    let queue = [this.root]
+    // Hold results
+    let results = []
+    
+    // While we have nodes in the queue
+    while(queue.length) {
+      // If left node exists push to queue
+      if(queue[0].left) {
+        queue.push(queue[0].left)
+      }
+      // If right node exists push to queue 
+      if(queue[0].right) {
+        queue.push(queue[0].right)
+      }
+      // Store results
+      results.push(queue[0].value)
+      // Dequeue
+      queue.shift()
+    }
+    return results
+  }
 
   max() {
     if(this.root === null) {
