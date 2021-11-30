@@ -69,6 +69,45 @@ class BinaryTree{
     return results
   }
 
+  fizzBuzz() {
+    if(this.root === null) { throw new Error('No Nodes Present in Binary Tree')}
+
+    // Copy Tree
+    let treeCopy = this
+    let queue = [treeCopy.root]
+
+    // While queue has elements
+    while(queue.length) {
+      let node = queue[0]
+
+      // If left node exists push to queue
+      if(node.left) {
+        queue.push(node.left)
+      }
+
+      // If right node exists push to queue 
+      if(node.right) {
+        queue.push(node.right)
+      }
+
+      // Perform transformation
+      if(node.value % 3 === 0 && node.value % 5 === 0) {
+        node.value = 'FizzBuzz'
+      }
+      else if (node.value % 3 === 0) {
+        node.value = 'Fizz'
+      }
+      else if (node.value % 5 === 0) {
+        node.value = 'Buzz'
+      } else {
+        node.value = node.value.toString()
+      }
+      // Dequeue
+      queue.shift()
+    }
+    return treeCopy
+  }
+
   max() {
     if(this.root === null) {
       throw new Error('No Nodes Present in Binary Tree')
