@@ -46,6 +46,7 @@ beforeAll(() => {
 let preRes = [1, 2, 6, 7, 8, 9, 3, 4, 5]
 let inRes = [6, 8, 7, 9, 2, 1, 4, 3, 5]
 let postRes = [8, 9, 7, 6, 2, 4, 5, 3, 1]
+let breadthFirstRes = [1, 2, 3, 6, 4, 5, 7, 8, 9]
 
 describe('Binary Tree Traversal', () => {
   it('preOrder properly traverses and returns result', () => {
@@ -61,6 +62,16 @@ describe('Binary Tree Traversal', () => {
   it('postOrder properly traverses and returns result', () => {
     let postOrder = tree.postOrder()
     expect(postOrder).toEqual(postRes)
+  })
+
+  it('breadthFirst properly traverses and returns results', () => {
+    let breadthFirst = tree.breadthFirst()
+    expect(breadthFirst).toEqual(breadthFirstRes)
+  })
+
+  it('breadthFirst throws error on empty tree', () => {
+    let emptyTree = null
+    expect(() => { emptyTree.breadthFirst().toThrow('No Nodes Present in Binary Tree')})
   })
 
   it('max returns correct value', () => {
