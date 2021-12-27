@@ -18,14 +18,12 @@ InsertionSort(int[] arr)
 ```
 
 
-## Whiteboard Process
-TODO
+<!-- ## Whiteboard Process -->
 
 ## Approach & Efficiency
 | Time Complexity | Space Complexity |
 | ---- | ---- |
-|  |  |
-|  |  |
+| O(n^2) | 1 |
 
 ### Run Solution
 
@@ -36,5 +34,3 @@ npm install
 # run jest tests for stack-queue-pseudo
 npm test insertion-sort.js
 ```
-
-### Sources
