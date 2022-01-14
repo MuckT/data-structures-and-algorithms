@@ -48,6 +48,25 @@ class HashTable {
     }
     return false
   }
+
+  // Finds the first repeated in a string
+  // Counts all the instances of words in a string
+  repeatedWords = (str) => {
+    let strArr = str.toLowerCase().match(/\b[a-z']+\b|[^\x00-\x7F]+/gi)
+    let firstRepeatedWord = null
+    let wordCounts = {}
+    strArr.forEach(item => {
+        if(!wordCounts[item]) {
+          wordCounts[item] = 1
+        } else {
+          if(firstRepeatedWord === null) {
+            firstRepeatedWord = item
+          }
+          wordCounts[item]++
+        }
+    });
+    return {firstRepeatedWord, wordCounts}
+  }
 }
 
 module.exports = HashTable
