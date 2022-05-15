@@ -5,6 +5,8 @@ class BinaryTree{
     this.root = root
   }
 
+  // Left will always come before the Right
+  // (Root, Left, Right)
   preOrder() {
     let results = []
 
@@ -18,6 +20,7 @@ class BinaryTree{
     return results
   }
   
+  // (Left, Root, Right)
   inOrder() {
     let results = []
 
@@ -31,6 +34,7 @@ class BinaryTree{
     return results
   }
 
+  // (Left, Right, Root)
   postOrder() {
     let results = []
 
