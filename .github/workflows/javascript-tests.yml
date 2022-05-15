@@ -1,16 +1,21 @@
 name: Run Javascript Tests
 
-on: [push]
+on: [push, pull_request]
+workflow_dispatch:
+  inputs:
+    logLevel:
+      description: 'Log level'
+      required: true
+      default: 'warning'
+    tags:
+      description: 'Run Javascript Tests'
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
     strategy:
       matrix:
         node-version: [12.x]
-
     steps:
     - uses: actions/checkout@v1
     - name: Use Node.js ${{ matrix.node-version }}
