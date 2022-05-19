@@ -41,13 +41,9 @@
 
 [Linked List](javascript/linked-list/)
 
-[Linked List](javascript/linked-list-zip/)
+[Linked List Zip](javascript/linked-list-zip/)
 
 [Reverse Array](javascript/reverse-array/README.md)
-
-<!-- TODO: README.md 
-[Reverse Linked List](javascript/reverse-ll/README.md)
--->
 
 [Stack Queue Brackets](javascript/stack-queue-brackets/README.md)
 

@@ -141,4 +141,25 @@ describe('Given linked list', () => {
       expect(list.toString()).toEqual("{ Test 00 } -> { Test 01 } -> { Test 02 } -> { Test 03 } -> NULL")
     })
   })
+
+  describe('When reversing', () => {
+    let list = new LinkedList()
+    beforeAll(() => {
+      list.insert('Test 03')
+      list.insert('Test 02')
+      list.insert('Test 01')
+      list.insert('Test 00')
+    })
+
+    it('Then should be able to reverse once', () => {
+      let reversed = list.reverse()
+      expect(reversed.toString()).toEqual("{ Test 03 } -> { Test 02 } -> { Test 01 } -> { Test 00 } -> NULL")
+    })
+
+    it('Then should be able to reverse twice', () => {
+      let reversed = list.reverse()
+      let doubleReversed = reversed.reverse()
+      expect(doubleReversed.toString()).toEqual("{ Test 00 } -> { Test 01 } -> { Test 02 } -> { Test 03 } -> NULL")
+    })
+  })
 })
