@@ -62,4 +62,9 @@ describe('K Arr Tree', () => {
     let emptyTree = null
     expect(() => { emptyTree.fizzBuzz().toThrow('No Nodes Present in Binary Tree')})
   })
+
+  it('fizzBuzz does not mutate original tree', () => {
+    tree.fizzBuzz()
+    expect(tree.breadthFirst()).toStrictEqual(breadthFirstRes)
+  })
 })

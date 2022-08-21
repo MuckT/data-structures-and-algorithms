@@ -1,5 +1,7 @@
 'use strict'
 
+const Node = require('./node')
+
 class KArrTree{
   constructor(root = null) { 
     this.root = root
@@ -28,9 +30,15 @@ class KArrTree{
     return results
   }
 
+  clone() {
+    let tree = new KArrTree()
+    tree.root = Node.clone(this.root)
+    return tree
+  }
+
   fizzBuzz() {
     if(this.root === null) { throw new Error('No Nodes Present in Binary Tree')}
-    let treeCopy = this
+    let treeCopy = this.clone()
     let queue = [treeCopy.root]
 
     while(queue.length) {
