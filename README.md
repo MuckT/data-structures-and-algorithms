@@ -39,19 +39,26 @@
 
 [Hash Table](javascript/hash-table/README.md)
 
-[Linked List](javascript/linked-list/)
+[Linked List](javascript/linked-list/README.md)
 
-[Linked List Zip](javascript/linked-list-zip/)
+[Linked List Zip](javascript/linked-list-zip/README.md)
 
 [Reverse Array](javascript/reverse-array/README.md)
+
+[Stacks and Queues](javascript/stacks-and-queues/README.md)
 
 [Stack Queue Brackets](javascript/stack-queue-brackets/README.md)
 
 [Stack Queue Pseudo](javascript/stack-queue-pseudo/README.md)
 
-[Tree Intersection](javascript/tree-intersection/README.md)
+[Binary Tree](javascript/trees/binary-tree/README.md)
 
-[Trees](javascript/trees/README.md)
+[Tree Intersection](javascript/trees/binary-tree/tree-intersection/README.md)
+
+
+### Misc
+
+[JavaScript Folder Setup](javascript/README.md)
 
 ### Sources
 

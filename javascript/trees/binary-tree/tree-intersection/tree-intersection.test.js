@@ -1,7 +1,7 @@
 'use strict'
 
-const Node = require('../trees/node')
-const BinaryTree = require('../trees/binary-tree')
+const Node = require('../node')
+const BinaryTree = require('../binary-tree')
 const { treeIntersection } = require('./tree-intersection')
 
 /* create Nodes 1 - 9 and left/right relationships
