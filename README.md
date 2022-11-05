@@ -1,19 +1,69 @@
 # Data Structures and Algorithms
 
-See [setup instructions](https://codefellows.github.io/setup-guide/code-301/3-code-challenges), in the Code 301 Setup Guide.
+## 301 Code Challenges
 
-## Repository Quick Tour and Usage
+[forEach](code-challenges/challenges-01.test.js)
 
-### 301 Code Challenges
+[array.map()](code-challenges/challenges-02.test.js)
 
-Under the `data-structures-and-algorithms` repository, at the top level is a folder called `code-challenges`
+[Filter](code-challenges/challenges-03.test.js)
 
-Each day, you'll add one new file to this folder to do your work for the day's assigned code challenge
+[Sort](code-challenges/challenges-04.test.js)
 
-### 401 Data Structures, Code Challenges
+[Reduce](code-challenges/challenges-05.test.js)
 
-[Reverse Array](javascript/code-challenges/reverse-array/README.md)
+[Value vs. Reference](code-challenges/challenges-06.test.js)
 
-[Array Insert Shift](javascript/code-challenges/array-insert-shift/README.md)
+[Array and String Methods](code-challenges/challenges-07.test.js)
 
-[Array Binary Search](javascript/code-challenges/array-binary-search/README.md)
+[Regular Expressions part I](code-challenges/challenges-08.test.js)
+
+[Object.keys, Object.values, and Object.entries](code-challenges/challenges-09.test.js)
+
+[Two-dimensional arrays](code-challenges/challenges-10.test.js)
+
+[Chaining Methods](code-challenges/challenges-11.test.js)
+
+[Regular Expressions, part II](code-challenges/challenges-12.test.js)
+
+[Includes, Every, Substring, charAt](code-challenges/challenges-13.test.js)
+
+[Review](code-challenges/challenges-14.test.js)
+
+
+## 401 Data Structures, Code Challenges
+
+[Array Binary Search](javascript/array-binary-search/README.md)
+
+[Array Insert Shift](javascript/array-insert-shift/README.md)
+
+[Hash Table](javascript/hash-table/README.md)
+
+[Linked List](javascript/linked-list/README.md)
+
+[Linked List Zip](javascript/linked-list-zip/README.md)
+
+[Reverse Array](javascript/reverse-array/README.md)
+
+[Stacks and Queues](javascript/stacks-and-queues/README.md)
+
+[Stack Queue Brackets](javascript/stack-queue-brackets/README.md)
+
+[Stack Queue Pseudo](javascript/stack-queue-pseudo/README.md)
+
+[Binary Tree](javascript/trees/binary-tree/README.md)
+
+[Tree Intersection](javascript/trees/binary-tree/tree-intersection/README.md)
+
+
+### Misc
+
+[JavaScript Folder Setup](javascript/README.md)
+
+### Sources
+
+[301 Setup Instructions](https://codefellows.github.io/setup-guide/code-301/3-code-challenges)
+
+
+
+

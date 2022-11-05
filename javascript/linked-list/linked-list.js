@@ -105,6 +105,18 @@ class LinkedList {
     returnString += 'NULL'
     return returnString
   }
+
+  reverse() {
+    let current = this.head
+    let outPut = new LinkedList()
+    while(current) {
+      outPut.head === null
+        ? outPut.head = new Node(current.value)
+        : outPut.head = new Node(current.value, outPut.head || null)
+        current = current.next
+    }
+    return outPut
+  }
 }
 
 module.exports = LinkedList

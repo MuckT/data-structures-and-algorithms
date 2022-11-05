@@ -13,6 +13,7 @@ Create a Binary Search Tree that extends the Binary Tree Class with `_add` and `
 | `postOrder` | O(n) |
 | `max` | O(n) |
 | `breadthFirst` | O(n)|
+| `fizzBuzz` | O(n) |
 
 
 ## Approach & Efficiency Binary Search Tree
@@ -37,6 +38,14 @@ Create a Binary Search Tree that extends the Binary Tree Class with `_add` and `
 `breadthFirst`
 
 - Returns all the values of the nodes as in the order encountered from a breadth first traversal.
+
+`fizzBuzz`
+
+- Returns a copy of the tree with the values following the rules:
+  - If the value is divisible by 3, replace the value with “Fizz”
+  - If the value is divisible by 5, replace the value with “Buzz”
+  - If the value is divisible by 3 and 5, replace the value with “FizzBuzz”
+  - If the value is not divisible by 3 or 5, simply turn the number into a String.
 
 ### Run Solution
 
