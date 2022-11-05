@@ -38,9 +38,6 @@ Create a new folder under the `javascript` level, with the name of the data stru
 │   ├── code-challenge-01.jpg
 │   ├── reverse-array.js
 │   └── reverse-array.test.js
-├── reverse-ll
-│   ├── reverse-ll.js
-│   └── reverse-ll.test.js
 ├── stack-queue-brackets
 │   ├── README.md
 │   ├── stack-queue-brackets.js
@@ -58,17 +55,22 @@ Create a new folder under the `javascript` level, with the name of the data stru
 │   └── stack
 │       ├── stack.js
 │       └── stack.test.js
-├── tree-intersection
-│   ├── README.md
-│   ├── tree-intersection.js
-│   └── tree-intersection.test.js
 └── trees
-    ├── README.md
-    ├── binary-search-tree.js
-    ├── binary-search-tree.test.js
-    ├── binary-tree.js
-    ├── binary-tree.test.js
-    └── node.js
+    ├── binary-tree
+    │   ├── README.md
+    │   ├── binary-search-tree.js
+    │   ├── binary-search-tree.test.js
+    │   ├── binary-tree.js
+    │   ├── binary-tree.test.js
+    │   ├── node.js
+    │   └── tree-intersection
+    │       ├── README.md
+    │       ├── tree-intersection.js
+    │       └── tree-intersection.test.js
+    └── k-arr-tree
+        ├── k-arr-tree.js
+        ├── k-arr-tree.test.js
+        └── node.js
 ```
 
 ### Data Structure Implementation
