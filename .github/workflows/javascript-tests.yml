@@ -4,7 +4,7 @@ on:
   pull_request:
     branches:
       - main
-    workflow_dispatch:
+  workflow_dispatch:
     inputs:
       logLevel:
         description: 'Log level'
@@ -16,19 +16,18 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [16.x]
 
     steps:
-    - uses: actions/checkout@v1
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
+    - uses: actions/checkout@v4
+    - name: Use Node.js LTS
+      uses: actions/setup-node@v4
       with:
-        node-version: ${{ matrix.node-version }}
-    - name: npm install, build, and test
+        node-version: lts/*
+        check-latest: true
+        cache: yarn
+    - name: Install dependencies and run tests
       run: |
-        npm i
-        npm test
+        yarn
+        yarn test
       env:
         CI: true
