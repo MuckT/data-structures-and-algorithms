@@ -227,5 +227,11 @@ $RECYCLE.BIN/
 # Visual Studio 2015/2017 cache/options directory
 .vs/
 
+# Python
+__pycache__/
+.pytest_cache/
+*.py[cod]
+.venv/
+.coverage
+.mypy_cache/
 
-# End of https://www.gitignore.io/api/node,macos,linux,windows,webstorm,visualstudiocode
