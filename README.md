@@ -1,6 +1,68 @@
 # Data Structures and Algorithms
 
-## 301 Code Challenges
+### JavaScript Setup
+
+Use Node.js LTS and Yarn (recommended) to install and run tests.
+
+Node setup (optional, via nvm):
+```bash
+nvm install --lts
+nvm use --lts
+node -v
+```
+
+Install dependencies and run tests (Yarn):
+```bash
+cd <root>
+yarn
+yarn test
+```
+
+If Yarn is not available:
+```bash
+# Option A: use Corepack to activate the repo-pinned Yarn 1.x
+corepack enable
+corepack prepare yarn@1.22.22 --activate
+
+# Option B: install globally (classic Yarn)
+npm i -g yarn
+```
+
+Using npm instead of Yarn:
+```bash
+npm ci
+npm test
+```
+
+Handy commands:
+- Run a specific Jest test file: `yarn test code-challenges/challenges-01.test.js`
+- Lint JavaScript: `yarn lint`
+
+### Python Setup
+
+Set up a local Python environment and run tests:
+
+```bash
+cd /Users/tomm/repos/data-structures-and-algorithms
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install -U pip pytest
+pytest --version
+```
+
+Run tests:
+- All Python challenges: `pytest -q code-challenges`
+- Single file: `pytest -q code-challenges/challenges_01_test.py`
+
+Pytest test discovery:
+- Default patterns: `test_*.py` or `*_test.py`
+- If you prefer “.test.py” names, add a `pytest.ini` at the repo root:
+  ```
+  [pytest]
+  python_files = *.test.py test_*.py *_test.py
+  ```
+
+## 301 Code Challenges (JavaScript)
 
 [forEach](code-challenges/challenges-01.test.js)
 
@@ -55,15 +117,6 @@
 
 [Tree Intersection](javascript/trees/binary-tree/tree-intersection/README.md)
 
-
 ### Misc
 
 [JavaScript Folder Setup](javascript/README.md)
-
-### Sources
-
-[301 Setup Instructions](https://codefellows.github.io/setup-guide/code-301/3-code-challenges)
-
-
-
-
