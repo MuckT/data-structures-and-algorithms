@@ -4,23 +4,29 @@ CHALLENGE 1
 
 Write a function named `addOne` that takes an array of numbers, and returns a new array of the numbers, incremented by 1.
 
-Use `forEach` to loop over the input array and work with each value.  Push the new value into a local array. Return the local array;
+Use `forLoop` to loop over the input array and work with each value.  Push the new value into a local array. Return the local array;
 ------------------------------------------------------------------------------------------------
 '''
 
 def addOne(arr):
-    pass
+    result = []
+    for num in arr:
+        result.append(num + 1)
+    return result
 
 '''
 CHALLENGE 2
 
 Write a function named `addExclamation` that takes an array of strings, and returns a new array of the same strings with an "!" added to the end.
 
-Use `forEach` to loop over the input array. Modify each string, and add the updated value into a local array. Return the local array;
+Use `forLoop` to loop over the input array. Modify each string, and add the updated value into a local array. Return the local array;
 '''
 
 def addExclamation(arr):
-    pass
+    result = []
+    for string in arr:
+        result.append(string + '!')
+    return result
 
 '''
 ------------------------------------------------------------------------------------------------
@@ -28,12 +34,15 @@ CHALLENGE 3
 
 Write a function named `allUpperCase` that takes an array of strings, and returns a new array of the strings converted to upper case.
 
-Use `forEach` to loop over the input array. The modified strings should each be added into a local array. Return that local array.
+Use `forLoop` to loop over the input array. The modified strings should each be added into a local array. Return that local array.
 ------------------------------------------------------------------------------------------------
 '''
 
 def allUpperCase(arr):
-    pass
+    result = []
+    for string in arr:
+        result.append(string.upper())
+    return result
 
 '''
 ------------------------------------------------------------------------------------------------
@@ -43,15 +52,18 @@ Write a function named `greeting` that takes in a single string and returns the 
 
 Then, write a function named `speaker` that takes in an array of strings and a callback function.
 
-Use `forEach` to build a new array of strings, each string modified by the callback. Return the new array.
+Use `forLoop` to build a new array of strings, each string modified by the callback. Return the new array.
 ------------------------------------------------------------------------------------------------
 '''
 
 def greeting(word):
-    pass
+    return word.upper() + '!'
 
 def speaker(words, callback):
-    pass
+    result = []
+    for word in words:
+        result.append(callback(word))
+    return result
 
 '''
 ------------------------------------------------------------------------------------------------
@@ -72,17 +84,19 @@ Return the modified array.
 '''
 
 def addValues(arr, value):
-    pass
+    arr.append(value)
 
 def addNumbers(num, arr, times, callback):
-    pass
+    for i in range(times):
+        callback(arr, num)
+    return arr
 
 '''
 ------------------------------------------------------------------------------------------------
 
 CHALLENGE 6
 
-Write a function named createList that takes in an array of the current store intentory.
+Write a function named createList that takes in an array of the current store inventory.
 
 The inventory is formatted like this:
 [
@@ -98,7 +112,11 @@ This function should use forEach to populate your grocery list based on the stor
 '''
 
 def createList(availableItems):
-    pass
+    result = []
+    for item in availableItems:
+        if item['available']:
+            result.append(item['name'])
+    return result
 
 '''
 ------------------------------------------------------------------------------------------------
@@ -117,7 +135,17 @@ Return the resulting output array.
 '''
 
 def fizzbuzz(arr):
-    pass
+    result = []
+    for num in arr:
+        if num % 3 == 0 and num % 5 == 0:
+            result.append('Fizz Buzz')
+        elif num % 3 == 0:
+            result.append('Fizz')
+        elif num % 5 == 0:
+            result.append('Buzz')
+        else:
+            result.append(num)
+    return result
 
 '''
 TESTS
