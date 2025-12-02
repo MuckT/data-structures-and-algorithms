@@ -15,11 +15,13 @@ def addOne(arr):
     return result
 
 '''
+------------------------------------------------------------------------------------------------
 CHALLENGE 2
 
 Write a function named `addExclamation` that takes an array of strings, and returns a new array of the same strings with an "!" added to the end.
 
 Use `forLoop` to loop over the input array. Modify each string, and add the updated value into a local array. Return the local array;
+------------------------------------------------------------------------------------------------
 '''
 
 def addExclamation(arr):
