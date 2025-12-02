@@ -7,7 +7,10 @@ Write a function named raisedToTheThird that takes in a list of numbers and retu
 '''
 
 def raisedToTheThird(arr):
-    pass
+    result = []
+    for num in arr:
+        result.append(num ** 3)
+    return result
 
 '''
 ------------------------------------------------------------------------------------------------
@@ -18,7 +21,10 @@ Write a function named addOne that, given a list of numbers, uses map (or an equ
 '''
 
 def addOne(arr):
-    pass
+    result = []
+    for num in arr:
+        result.append(num + 1)
+    return result
 
 '''
 ------------------------------------------------------------------------------------------------
@@ -29,7 +35,10 @@ Write a function named addQuestion that, given a list of strings, uses map (or a
 '''
 
 def addQuestion(arr):
-    pass
+    result = []
+    for string in arr:
+        result.append(string + '?')
+    return result
 
 '''
 ------------------------------------------------------------------------------------------------
@@ -44,18 +53,21 @@ For example, forLoopTwoToThe([1,2,3]) returns [2,4,8] because 2 ** 1 = 2, 2 ** 2
 '''
 
 def forLoopTwoToThe(arr):
-    pass
+    result = []
+    for num in arr:
+        result.append(2 ** num)
+    return result
 
 '''
 ------------------------------------------------------------------------------------------------
 CHALLENGE 5
 
-Write a function named forEachTwoToThe that produces the same output as your forLoopTwoToThe function from challenge 4, but explicitly iterates over each element (i.e., “for-each” style loop in Python).
+Write a function named forEachTwoToThe that produces the same output as your forLoopTwoToThe function from challenge 4, but do so with a one line return statement.
 ------------------------------------------------------------------------------------------------
 '''
 
 def forEachTwoToThe(arr):
-    pass
+    return [2 ** num for num in arr]
 
 '''
 ------------------------------------------------------------------------------------------------
@@ -66,7 +78,7 @@ Write a function named mapTwoToThe that produces the same output as your forLoop
 '''
 
 def mapTwoToThe(arr):
-    pass
+    return list(map(lambda x: 2 ** x, arr))
 
 '''
 ------------------------------------------------------------------------------------------------
@@ -80,7 +92,10 @@ For example: charCode(['h','i']) returns [104, 105].
 '''
 
 def charCode(arr):
-    pass
+    result = []
+    for letter in arr:
+        result.append(ord(letter))
+    return result
 
 '''
 ------------------------------------------------------------------------------------------------
@@ -93,9 +108,13 @@ If any element in the input is not a number, the resulting list should have the 
 For example: evenOdd([1,2,3]) returns ['odd','even','odd'].
 ------------------------------------------------------------------------------------------------
 '''
+def classify(value):
+    if not isinstance(value, (int, float)):
+        return 'N/A'
+    return 'even' if value % 2 == 0 else 'odd'
 
 def evenOdd(arr):
-    pass
+    return list(map(classify, arr))
 
 '''
 ------------------------------------------------------------------------------------------------
@@ -111,7 +130,7 @@ extractAbilities(snorlaxAbilities['abilities'])
 '''
 
 def extractAbilities(arr):
-    pass
+    return list(map(lambda x: x['ability']['name'], arr))
 
 '''
 ------------------------------------------------------------------------------------------------
@@ -128,7 +147,7 @@ Here is an example of a single array element: { name: 'speed', total: 35 }
 '''
 
 def extractStats(arr):
-    pass
+    return list(map(lambda x: { 'name': x['stat']['name'], 'total': x['effort'] + x['baseStat'] }, arr))
 
 '''
 ------------------------------------------------------------------------------------------------
